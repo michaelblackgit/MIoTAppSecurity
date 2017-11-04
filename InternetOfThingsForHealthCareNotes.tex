@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\begin{center}
+\LARGE The Internet Of Things For Health Care Notes
+\end{center}
+\section*{The IoThNet Topology}
+Transforms heterogeneous computing and storage capability of mobile devices into hybrid 
+computing grids.
+Heterogenous computing: System that uses more than one kind of processor.
+Hybrid computing grids: Cloud.
+Basically the devices and the data providers, i.e. sensors, talk to each other, getting 
+and posting information under the surveilance of a Broker in a central space called the
+Coordination Space.
+
+\section*{The IoTheNet Architecture}
+The physical elements. Continua Health Aliance recomends the following: An IoT gateway and
+wireless local network (WLAN) or a personal area network (WPAN) along with multimedia 
+streaming and secure communications between these. According to this article, the 
+IPv6-based 6LoWPAN is the basis of the IoThNet. This is used by sensors and wearables
+to transmit data. But this doesn't support mobile devices. These instead need HTTP, COAP,
+and SSL for the application. The transport uses TCP or UDP (WebSockets?) and the network
+is either IPv6 or RPL. The adaptation is 6LoWPAN Adaptation and the Link and PHY is
+IEEE 802.15.4 PHY/MAC.
+To make transfer of data fast for these applications they use a DAG.
+
+\section*{The IoThNet Platform}
+Refers to both the network and computing platform. This may be where middlewares like
+KAA come in. There is a design for interoperability of hardware and software that 
+includes human-machine interfaces, multidisciplinary optimization, and application
+management. This is an interface standardization. 
+In one case there is the application of using VITRUS as a middleware, based on 
+an instand messaging protocol, XMPP. Multiple users with multiple sensors need to be 
+able to acess the gateway even with poor connectivity and to do this an algorithm is 
+used to read raw health data from an edge router and parse its data in a predetermined
+format. A three-layer cloud platform is used to access cloud data and includes a resource
+layer for controlling the access to data and a business layer for the coordination of data
+sharing.
+
+\section*{IoT Healthcare Services and Applications}
+This paper splits apart the offer of IoT-based healthcare systems into services and 
+applications. Applications themselves are divided into two groups: single-condition and
+cluster-condition applications. The first is for a specific disease while the latter
+is many diseases treated as a whole. 
+
+\section*{IoT Healthcare Services}
+The point of services is to provide healthcare solutions. Thus a service is generically
+a setup for some kind of solution. Solutions can include notifications, resource-sharing
+devices, internet services, cross-connectivity protocols for heterogeneous devices, and
+link protocols for major connectivity. It may also aim to make the discovery of devices
+quick and secure. 
+
+\begin{enumerate}
+\item Ambient Assisted Living (AAL)
+\\ This is artificial intelligence that is used to take care of the elderly or those who 
+are incapacitated. Its primary focus is to make these people more independent and 
+increase the quality of their life. For AAL, radio frequency identification (RFID) and
+near-field communications (NFC) are used for passive communication. Keep in touch (KIT)
+and closed-loop health services are said to help facilitate AAL. 
+
+\item The Internet of m-Health Things (m-IoT)
+\\ This is mobile computing, medical sensors, and communication tech for healthcare services. 
+It represents all of IoT for healthcare services, but has some attributes that are unique
+to it. It has the potential to of m-IoT for the noninvasive sensing of glucose levels. 
+Two challenges in this are context-aware issues and m-IoT ecosystems. Some of these services
+are based on mobile message exchange.
+
+\item Adverse Drug Reaction (ADR)
+\\ This is an injury from taking a medication. This is very generic, thus ADR services vary
+depending on the drug at hand. An example of this is using a barcode through NFC to 
+track whether the drug a patient is using is compatible with logged alergies and other
+tracked health records.
+
+\item Community Healthcare (CH)
+\\ This involves establishing a network around a local community, like a hospital or a rural
+community, through a cooperative network structure, and it treats many health requirements
+as a package. This can be viewed as a virtual hospital. 
+
+\item Children Health Information (CHI)
+\\ This can be applied to emotional, behavioral, or mental health. This can also be 
+entertaining for children.
+
+\item Wearable Device Access (WDA)
+\\ This utilizes nointrusive sensors, smartphones, and smart watches. Bluetooth may also be
+a prospect.
+
+\item Semantic Medical Access (SMA)
+\\ This is basically used for the analysis of large amounts of data, such as ontologies.
+
+\item Indirect Emergency Healthcare (IEH)
+\\ This is used for emergencies and can provide information, notifications, post-accident
+action, and record keeping.
+
+\item Embedded Gateway Configuration (EGC)
+\\ This connects patients to the internet and other medical equipment. It should allow for
+automated and intelligent monitoring. This could include mobile computing devices. 
+\end{enumerate}
+\end{document}
+

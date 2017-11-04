@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\begin{center}
+\LARGE Proposed Embedded Security Framework for Internet of Things (IoT) Notes
+\end{center}
+
+\section*{Introduction}
+IoT will further connect the world. This will make human life easier through response to our needs. It combines the network with physical devices. It works by having every day objects talk to one another. Because it's still pretty new, there's a lot of market potential.
+\\
+\\ In order to enable the progression of IoT, we must address its security issues.
+\\
+\\ Previous security issues haven't been properly protected against and since it's injected after the product has been made it can obstruct the design's original purpose. Designers focus more on functionality and businesses focus more on short term profit.
+
+\section*{Virtual Shopping Scenario for IoT}
+IoT basically eliminates the need for human interaction through a series of data transmissions. These transmissions can be open to hackers who want to steal your sensitive information. The resource constraints of these devices also allow for greater security risks. 
+\\
+\\ section*{Attacks on IoT Systems}
+These attacks include physical attacks like micro-probing and reverse engineering, side channel attacks like timing, power, fault, and electromagnetic analysis, environmental attacks, cryptoanalysis attacks like ciphertext, known plaintext, chosen plaintext, and man in the middle attacks, software attacks like a virust, trojan horse, logic bomb, worm or DoS attack, and network attacks like monitor and eavsedropping, traffic analysis, camouflage, DoS attacks, node subcersion or malfunction, capture or outage, message corruption or false node, and replication or routing attacks.
+
+\begin{enumerate}
+\item phsyical attacks - these attacks mess with hardware. they are difficult to perform as they usually involve exprensive material. 'some examples are de-packaging of chip, layout reconstruction, micro-probing, and particle beam techniques.
+\item side channel attacks - these attacks involve recording and analyzing the radiation or power of the encryption device to narrow down possible encryption patterns for key obstruction. 
+\item cryptoanalysis attacks - these attacks aim to find the encryption key of a system
+\item software attacks - these are the main source of vulnerabilities and can include buffer overflow attacks or malicious code injection.
+\item network attacks - these are unique to wireless systems and include active or passive adversaries such as eavesdropping or DoS attacks respectively.
+
+\section*{Security Requirement for IoT}
+The major security concerns for IoT include user identification, tamper resistance, secure software execution, secure content, secure network access, secure data communications, identity management, and secure storage.
+
+\begin{enumerate}
+\item user identification - refers to validating users
+\item tamper resistance - refers to maintaining security even when in the hands of an adversary
+\item secure execution environment - refers to well managed code security wise during runtime
+\item secure content - Digital Rights Management (DRM) 'protects the rights of the digital content used in the system'
+\item secure network access - refers to providing connections only if the device is authorized
+\item secure data communications - refers to the authentication of peers that communicate, providing confidentiality and integrity to the system, and protecting identity
+\item identity management - user rights and privileges along with their authentication
+\item secure storage - 'involves confidentiality and integrity of sensitive information stored in the system'
+\end{enumerate}
+
+\section*{Issues and Challenges}
+Some issues and challenges include 
+\begin{enumerate}
+\item security can be resource consuming. this is especially true of low power embedded systems. 
+\item cryptography is expensive. we would have to make light weight and optimized security algorithms. 
+\item kind of the same as above, security is expensive
+\item there's no one solution/ the solutions are tailored to each individual product so it's had to have a catch all
+\item IoT has security threats in both software and hardware
+\item there is a need for standard interoperable security protocols
+\end{enumerate}
+
+\section*{Related Work}
+Existing solutions are divided into the following:
+\begin{enumerate}
+\item software only approach - makes use of embedded General Purpose Processors (GPP). It is cheap and flexible but can consume too much power. It provides many solutions (which are?)
+\item hardware only approach - makes use of Application Specific Integrated Circuits (ASICs) for cryptographic algorithms in hardware. This is great for energy but isn't very flexible or cost efficient. 
+\item hybrid approach - combo of the two previous. This is the best approach and does the best with efficiency, flexibility, and cost, however it involves having a deeper understanding of the big picture and inner workings of the system. 
+\end{enumerate}
+
+previous solutions are split into 'basic security functions and countermeasures against security attacks.' see \textbf{Table 1} for more details...
+\\
+\\ The authors argue that there needs to be a embedded security framework to shift security focuses from function centric to the design of the entire system. 
+
+\section*{Building Blocks}
+Reiteration of security being a part of the design, not an afterthought as mentioned in intro to security. Building blocks include:
+\begin{enumerate}
+\item cryptographic algorithms - the foundation of security. Due to the constraints of embedded systems there needs to be lightweight, efficient, and easy to deploy cryptography scheme 'that provides high levels of security while minimizing memory, execution speed requirements and power requirements.' ECC may play a big part in accomplishing this. 
+\item secure storage - due to the necessity of keys for cryptography, the secure storing of these keys is critical. It also has to be consistent and refrain from losing any memory. Possible solutions would involve utilizing on-chip ROM, OTP tech, and off-chip flash mem.
+\item secure boot - this is to ensure that a system can be brought to start in a trusted state.
+\item secure JTAG - a debugging interface for chips used during development and manufacturing as well as helping debug throughout a software's life cycle. It is also potentially exploitable (be sure to research more about this later)
+\item secure execution environment (SEE) - refers to processor that can execute files securely. Needs a secure kernel?
+\end{enumerate}
+
+\section*{Proposed Embedded Security Framework}
+The authors argue that this would entail the following:
+\begin{enumerate}
+\item an environmental factor - how the environment that encloses the system finds and reacts to threats.
+\item security objectives - determining which data to protect and how which attacks your system will protect itself against. 
+\item requirements - determine what you need
+\end{enumerate}
+
+The authors make their proposed security from the start mindset quite clear by providing a diagram that basically lays out the entire lifecycle of a piece of software and adds embedded security to it with arrows to every step of the lifecycle. 
+\\
+\\ There is also, as mentioned before, a trade off between performance, cost, and security which almost always contradict one another. The authors beleive that the following would be key features of the security framework:
+
+\begin{enumerate}
+\item lightweight cryptography
+\item physical security
+\item standard security protocols
+\item secure operating systems
+\item secure storage
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
+
